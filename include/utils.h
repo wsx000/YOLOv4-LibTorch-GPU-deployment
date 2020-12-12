@@ -27,7 +27,7 @@ public:
      * @param t_num_anchors 每个特征层的anchor数量
      * @param t_num_classes 类别总数
      **************************************************************************/ 
-    DecodeBox(float t_anchors[][2], float t_image_size[], int t_num_anchors=3, int t_num_classes=2);
+    DecodeBox(float t_anchors[][2], float t_image_size[]);
 
     /**************************************************************************
      * @brief 预处理特征层

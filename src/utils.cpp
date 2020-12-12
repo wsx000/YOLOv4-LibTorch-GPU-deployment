@@ -29,9 +29,6 @@ DecodeBox::DecodeBox(float t_layer_anchors[][2], float t_model_image_size[])
     // 获取模型中图像的尺寸
     for (size_t i = 0; i < 2; i++)
         image_size[i] = t_model_image_size[i];
-
-    // 获取bbox相对于每个类的的属性数量
-    bbox_attrs = num_classes + 5;
 }
 
 

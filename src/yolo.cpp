@@ -64,9 +64,9 @@ at::DeviceType YOLO::wether_GPU(void)
 
 vector<vector<float>> YOLO::detect_image(cv::Mat image)
 {
-    DecodeBox yolo_decodes1(all_anchors[0], model_image_size, 3, 2);
-    DecodeBox yolo_decodes2(all_anchors[1], model_image_size, 3, 2);
-    DecodeBox yolo_decodes3(all_anchors[2], model_image_size, 3, 2);
+    DecodeBox yolo_decodes1(all_anchors[0], model_image_size);
+    DecodeBox yolo_decodes2(all_anchors[1], model_image_size);
+    DecodeBox yolo_decodes3(all_anchors[2], model_image_size);
     // 调整图片大小
     cv::Mat crop_img = letterbox_image(image, model_image_size);
     // 调整图片格式

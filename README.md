@@ -8,7 +8,7 @@ PyTorch1.7.1
 LibTorch1.7.1  
 torchvision0.8.2  
 OpenCV3.4.10  
-GTX2070  
+RTX2070  
 
 用法：  
 1、使用pytorch2libtorch.py脚本转化模型文件，该脚本用来参考，具体代码请按照实际情况修改  

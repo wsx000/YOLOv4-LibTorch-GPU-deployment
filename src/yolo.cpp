@@ -122,7 +122,7 @@ vector<vector<float>> YOLO::detect_image(cv::Mat image)
     at::Tensor bbox = nms_out[0];
 
     // 提取置信度及类别
-    at::Tensor top_conf = bbox.index({"...", 4}) * bbox.index({"...", 5}).unsqueeze(-1);  // 提取置信度
+    at::Tensor top_conf = (bbox.index({"...", 4}) * bbox.index({"...", 5})).unsqueeze(-1);  // 提取置信度
     at::Tensor top_label = bbox.index({"...", -1}).unsqueeze(-1);  // 提取所属类别
     // 分别提取定点坐标，并拓展维度
     // at::Tensor top_bbox = bbox.index({"...", Slice(None, 4)});  // 提取坐标

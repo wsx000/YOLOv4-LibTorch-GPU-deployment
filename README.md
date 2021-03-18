@@ -30,3 +30,6 @@ make
 运行效果测试：  
 使用GPU（RTX2070）下，单帧图片检测全程大概47ms  
 CPU的检测全程大概1.6s  
+
+2021.3 更新  
+注意文件utils.cpp里第172行代码有问腿，具体可看Issue里的提问，感谢ID：happyboyneu找出的这个bug  

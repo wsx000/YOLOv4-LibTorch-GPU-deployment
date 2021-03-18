@@ -170,8 +170,8 @@ vector<at::Tensor> yolo_nms(at::Tensor prediction, int num_classes, float conf_t
     // 获得的内容为(x1, y1, x2, y2, obj_conf, class_conf, class_pred)
     at::Tensor detections = at::cat({output.index({"...", Slice(None, 5)}), class_conf.toType(at::kFloat), class_pred.toType(at::kFloat)}, -1);
     // 获取种类的个数，返回无重复的元素
-    // ！！！2021.3更新：注意该获取种类的方式有问题，具体解决方法可看Issues里的提问
-    // ！！！2021.3 update：Note that there is a problem with the way to obtain the category. The solution can be found in the Issues section
+    // ！！！2021.3更新：注意该获取种类的方式有问题，具体解决方法可看Issues里的提问：https://github.com/wsx000/YOLOv4-LibTorch-GPU/issues/2 感谢ID：happyboyneu找出这个bug！
+    // ！！！2021.3 update：Note that there is a problem with the way to obtain the category. The solution can be found in the Issues section：https://github.com/wsx000/YOLOv4-LibTorch-GPU/issues/2  thanks ID：happyboyneu for finding this bug。
     std::tuple<at::Tensor, at::Tensor, at::Tensor> unique_labels_tuple = at::unique_consecutive(detections.index({"...", -1}));
     at::Tensor unique_labels = get<0>(unique_labels_tuple);
 

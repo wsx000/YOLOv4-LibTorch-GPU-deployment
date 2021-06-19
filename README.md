@@ -32,4 +32,4 @@ make
 CPU的检测全程大概1.6s  
 
 2021.3 更新  
-注意文件utils.cpp里第172行代码有问腿，具体可看Issue里的提问，感谢ID：happyboyneu找出的这个bug  
+注意文件utils.cpp里第172行代码有问题，我比较懒，就先不改了~具体怎么改可看Issue里的提问哈~感谢ID：happyboyneu找出的这个bug  

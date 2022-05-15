@@ -28,7 +28,7 @@ make
 3、OpenCV的安装方法可参考：https://blog.csdn.net/Flag_ing/article/details/109508374  
 
 运行效果测试：  
-使用GPU（RTX2070）下，单帧图片检测全程大概47ms  
+使用GPU（RTX2080Ti）下，单帧图片检测全程大概32ms  
 CPU的检测全程大概1.6s  
 
 2021.3 更新  
